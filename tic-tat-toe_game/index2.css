@@ -1,0 +1,128 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+    
+}
+body{
+     background-color: blueviolet;
+}
+.con{
+     width: 100vw;
+     height: 50vh;
+     display: grid;
+     justify-content: center;
+     align-items: center;
+     grid-template-columns: repeat(3,auto);
+     margin-top: 120px;
+    
+}
+
+.cell{
+     width: 100px;
+     height: 100px;
+     background-color: white;
+     border: 1px solid black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     display: relative;
+}
+.x::after,
+.x::before{
+    content: '';
+         width: 13px;
+         height: 80px;
+         background-color: black;
+        display: absolute;
+      
+      
+}
+.x::after{
+     content: '';
+     transform: rotate(45deg) translateY(8px);
+}
+.x::before{
+    content: '';
+    transform: rotate(-45deg)translateY(9px);
+}
+
+
+.circle::before{
+    content: '';
+         width: 77%;
+         height: 77%;
+         background-color: black;  
+         border-radius: 50%;
+         position: relative;
+        
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+     border-top: none;
+}
+.cell:nth-child(3),
+.cell:nth-child(9),
+.cell:nth-child(6){
+          border-right: none;
+}
+.cell:first-child,
+.cell:nth-child(4),
+.cell:nth-child(7){
+     border-left: none;
+}
+.cell:nth-child(4),
+.cell:nth-child(5),
+.cell:nth-child(6){
+     border-bottom: none;
+}
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:last-child{
+    border-bottom: none;
+}
+
+.X{
+      position: absolute;
+      top: 230px;
+      left: 60px;
+      font-size: 30px;
+      font-family: 'Press Start 2P';
+      color: white;
+     
+}
+.repeat{
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: black;
+     opacity: .9;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     display: none;
+    
+}
+.repeat button{
+     width: 130px;
+     background-color: white;
+     border: none;
+     height: 40px;
+     border-radius: 12px;
+     display: relative;
+     font-family: 'Press Start 2P';
+     cursor: pointer;
+}
+.winning_massage{
+             color: white;
+             font-size: 20px;
+             font-family: 'Press Start 2P';
+             padding-bottom: 20px;
+}
